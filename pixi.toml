@@ -1,6 +1,6 @@
 [workspace]
 authors = ["AbderrahimAl <abderrahimalakouche@gmail.com>"]
-channels = ["marc.lehner","knime", "conda-forge", "anaconda"]
+channels = ["knime/label/nightly","knime", "conda-forge", "anaconda"]
 name = "py39-spacy-cpu"
 platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 version = "0.1.0"
@@ -29,13 +29,13 @@ pytorch = "*"
 
 [feature.build.dependencies]
 python = "3.9.*"
-knime-extension-bundling = "5.9.*"
+knime-extension-bundling = "5.10.*"
 
 [feature.debug.dependencies]
 debugpy = "*"
 
 [feature.build.tasks]
-build = { args = [{ "arg" = "dest", "default" = "./local-update-site" }], cmd = "build-python-extension . {{ dest }} --force --disable-strict-enforcement --update-sites-version 5.9"}
+build = { args = [{ "arg" = "dest", "default" = "./local-update-site" }], cmd = "build-python-extension . {{ dest }} --force --disable-strict-enforcement --update-sites-version 5.10"}
 
 [environments]
 build = {features = ["build"], no-default-feature = true}
