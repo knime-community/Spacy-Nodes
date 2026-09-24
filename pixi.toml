@@ -1,6 +1,6 @@
 [workspace]
 authors = ["AbderrahimAl <abderrahimalakouche@gmail.com>"]
-channels = ["knime", "conda-forge", "anaconda"]
+channels = ["knime/label/nightly", "knime", "conda-forge", "anaconda"]
 name = "py39-spacy-cpu"
 platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 version = "0.1.0"
@@ -28,8 +28,8 @@ pytorch = "*"
 
 
 [feature.build.dependencies]
-python = "3.9.*"
-knime-extension-bundling = "5.*"
+python = "3.13.*"
+knime-extension-bundling = "6.*"
 
 [feature.debug.dependencies]
 debugpy = "*"
