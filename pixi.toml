@@ -1,6 +1,6 @@
 [workspace]
 authors = ["AbderrahimAl <abderrahimalakouche@gmail.com>"]
-channels = ["knime", "conda-forge", "anaconda"]
+channels = ["knime/label/nightly", "knime", "conda-forge", "anaconda"]
 name = "py39-spacy-cpu"
 platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 version = "0.1.0"
@@ -9,7 +9,7 @@ version = "0.1.0"
 # Shared dependencies across all platforms
 [dependencies]
 python = "3.11.*"
-knime-python-versions = "5.*"
+knime-python-versions = ">=5.8.5,<5.9"
 py4j = "*"
 pandas = "*"
 numpy = "*"
